@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "node --watch ./src/server.js"
+  },
+  "name": "pietra-frutas",
+  "version": "1",
+  "type": "module",
+  "main": "./src/server.js",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
