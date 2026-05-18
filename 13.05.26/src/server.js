@@ -1,10 +1,9 @@
 const express = require('express');
-const pool = require('./db.js'); // Importa a conexão criada acima
-const app = express();
+const pool = require('./db.js'); 
 
 app.use(express.json());
 
-// Rota: Listagem Total (getAll)
+
 app.get('/legumes', async (req, res) => {
     try {
         const resultado = await pool.query('SELECT * FROM legumes_seu_nome');
@@ -14,7 +13,6 @@ app.get('/legumes', async (req, res) => {
     }
 });
 
-// Rota: Consulta por ID (getById)
 app.get('/legumes/:id', async (req, res) => {
     const { id } = req.params;
     try {
