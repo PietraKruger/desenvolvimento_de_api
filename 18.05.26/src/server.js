@@ -1,5 +1,5 @@
 import express from 'express'
-import { refriRoutes } from "./routes/refri.js"
+import { refriRoute } from "./routes/refri.js"
 
 const app = express();
 
@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
     res.json("API Funcionando")
 })
 
-app.use("refri", refriRoutes); // middleware para ler o json trafegado
+app.use("/refri", refriRoute); // middleware para ler o json trafegado
 
 // app.use("/refrigeramtes", refriRoutes)
 
